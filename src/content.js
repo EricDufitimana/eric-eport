@@ -3,7 +3,7 @@ export const profile = {
   name: 'Eric Dufitimana',
   school: 'Agahozo-Shalom Youth Village',
   introduction: 'I build software for my school in Rwanda. If you spend a week here, you might also hear me arguing a debate motion, singing with the school band, or reading a poem I wrote.',
-  contact: 'https://www.linkedin.com/in/eric-dufitimana-4676872a4/',
+  contact: null, // Add a confirmed public https: profile or mailto: address to show contact.
 };
 
 export const projects = [
@@ -43,39 +43,35 @@ export const activities = [
   {
     "name": "Raspberry Pi Foundation Code Club @ ASYV",
     "role": "Co-founder & president · Grades 11–12",
-    "text": "I expanded access to programming from 15 selected students to 70+ and taught web development. A club member applied those lessons to build an education platform."
+    "text": "I co-founded the club to open programming to more students. What began with 15 selected students grew to more than 70. I taught web development, and one member used those lessons to build an education platform of their own."
   },
   {
     "name": "ASYV Debate Club",
     "role": "Secretary · Grade 10 / Vice president · Grade 11",
-    "text": "I ran 20-minute daily sessions on rebuttals and thinking on the spot. First-years I taught reached the semifinals of a national debate competition."
+    "text": "I led 20-minute daily practices where first-year debaters learned to spot the weakest part of an argument and respond on the spot. Students I coached went on to reach the semifinals of a national debate competition."
   },
   {
     "name": "Robotics & Innovation Club",
     "role": "Co-founder & former vice president · Grades 9–11",
-    "text": "I helped start ASYV’s first robotics club, mentored 20+ students, and contributed to our team’s national FIRST LEGO League result.",
+    "text": "I co-founded ASYV’s first robotics club and mentored more than 20 students in robotics. In 2025, our team earned third place nationally in the Innovation Project category at FIRST LEGO League Rwanda.",
     "honor": "first-lego"
   },
   {
     "name": "ASYV Live Band",
     "role": "Rapper & lyricist · Grades 10–12",
-    "text": "I perform weekly as a rapper for a 500+ crowd. I performed at a concert for 1,000+ people and at the international Ubumuntu Arts Festival. At the Agahozo & Friends concert at Zaria Court, I performed alongside Juno Kizigenza and Ariel Wayz. I am featured on two released songs."
+    "text": "I write lyrics and rap for more than 500 people each week. I’ve performed at the international Ubumuntu Arts Festival, played to a concert audience of more than 1,000, and shared the stage with Juno Kizigenza and Ariel Wayz at Agahozo & Friends at Zaria Court. I’m also featured on two released songs."
   },
   {
     "name": "Isano Isangiwe — ASYV poetry & theatre group",
     "role": "Poet & theatre director · Grades 10–12",
-    "text": "I write and recite original poems for 500+ people. I organized, directed, and acted in an adaptation of Romeo & Juliet."
+    "text": "I write original poems and perform them for audiences of more than 500. For our adaptation of Romeo and Juliet, I organized the production, directed the cast, and took the stage as an actor."
   },
 
-  {
-    "name": "Jackal Tech at ASYV",
-    "role": "Student software team",
-    "text": "I helped organize a selective group of 15 students developing software for real problems."
-  },
+
   {
     "name": "Student government",
     "role": "Former junior minister",
-    "text": "As junior minister, I helped 128 first-year students settle into village life, practice public speaking, and connect with older students. I later served as student government vice president."
+    "text": "As junior minister, I helped 128 first-year students settle into village life, practice public speaking, and connect with older students."
   }
 ];
 
@@ -83,7 +79,6 @@ export const learning = [
   ['Yale Young African Scholars', '2025 residential participant'],
   ['Isomo Circles', 'Learning beyond the classroom'],
   ['Dreamers Academy Camp', 'Grade 9 participant'],
-  ['International Physics Competition', 'Participant representing Rwanda'],
   ['Kaggle', 'Intro to Machine Learning'],
   ['CMU CS Academy', 'Self-directed learning'],
   ['CS50x', 'Coursework through week four'],
@@ -94,7 +89,7 @@ export const honors = [
   { id: 'yale-delegate', name: 'Yale Model African Union V, Best Delegate', grade: '11', context: 'International' },
   { id: 'yale-pitch', name: 'Yale Model African Union V, Mandate-2-Market Pitch Contest finalist', grade: '11', context: 'International · Green Charcoal pitch' },
   { id: 'green-hills', name: 'Green Hills Model United Nations, Best Delegate', grade: '11', context: 'National' },
-  { id: 'idebate', name: 'iDebate Tournament Champions', grade: '10', context: 'National team championship · 2024 · First among 54 teams' },
+  { id: 'idebate', name: 'iDebate Tournament Champions', grade: '10', context: 'National team championship · 2024 ' },
   { id: 'first-lego', name: 'FIRST LEGO League Rwanda, third place in Innovation Project', grade: '10', context: 'National team recognition · 2025' },
   { id: 'isomo-english', name: 'Isomo Circles, Best Duolingo English Test Score', grade: '10', context: 'National-level program recognition' },
   { id: 'isomo-typing', name: 'Isomo Circles Typing Competition, winner', grade: '10', context: 'National-level program recognition' },
@@ -118,7 +113,7 @@ export const creativeActivities = [
     "type": "mic",
     "title": "ASYV Live Band",
     "place": "Rapper & lyricist · Grades 10–12",
-    "text": "I perform weekly as a rapper for a 500+ crowd. I also performed at a concert for 1,000+ people and at the international Ubumuntu Arts Festival. At the Agahozo & Friends concert at Zaria Court, I performed alongside Juno Kizigenza and Ariel Wayz. I am featured on two released songs.",
+    "text": "Most weeks, the people I rap for are the same people I sit next to in class. I like looking up from the mic and seeing familiar faces. Writing lyrics is something I can do on my own, but the band gets a say in how they sound. A drumbeat can change where I take a breath or which word I lean on. That’s one of my favorite parts of playing live.",
     "note": "Weekly performances · Two released songs",
     "color": "pink",
     "image": "/images/zaria-group.jpg",
@@ -128,7 +123,7 @@ export const creativeActivities = [
     "type": "theatre",
     "title": "Isano Isangiwe",
     "place": "Poet & theatre director · Grades 10–12",
-    "text": "In ASYV’s poetry and theatre group, I write and recite original poems for 500+ people. I organized, directed, and acted in an adaptation of Romeo & Juliet.",
+    "text": "With poetry, I get to decide how long to hold a pause and which words I want people to remember. Directing our adaptation of Romeo and Juliet asked something different of me. I might hear a line one way in my head, then hear another actor say it and like their version better. Acting in the play myself helped me understand how much room a performer needs to make a part their own.",
     "note": "Poetry · Directing · Acting",
     "color": "yellow",
     "image": "/images/theatre.jpg",
@@ -138,7 +133,7 @@ export const creativeActivities = [
     "type": "pen",
     "title": "Original poetry",
     "place": "Writing, reciting & performing at ASYV",
-    "text": "I write poems about growth and love and share them through live performance. I won the poetry category of the ASYV Grade Art Competition in both Grade 9 and Grade 10.",
+    "text": "I write about things like growing up and love because I’m still figuring them out myself. Sometimes a thought comes out more honestly in a poem than it would in conversation. I like sharing those poems at ASYV. There’s something personal about standing in front of people I see every day and letting them hear what’s been on my mind.",
     "note": "Poetry category winner · Twice",
     "color": "mint"
   }

@@ -33,9 +33,12 @@ With the dev server running, `npm run check` checks responsive widths, navigatio
 
 ## Private handoff
 
-- Confirm Jackal Tech officer title and current project maintenance status before publishing.
-- Debate Club currently uses “Debate Club leadership”; verify the final officer sequence in the activity record before publishing.
+- The résumé appears directly after the hero. `src/Resume.jsx` preserves the document’s serif typography, rules, aligned roles/dates, and bullets in a responsive text view. A generated PDF and edited Word copy are in `public/documents`.
+- The résumé uses six selected honors from `src/resume-awards.js` in a plain comma-separated paragraph. The complete 15-entry Honors index stays on the site. Keep downloads in sync: `scripts/export-resume.mjs` regenerates the PDF, then `scripts/update-resume-awards.py` updates the Word awards.
+- `src/Academics.jsx` follows the résumé: SAT 1520, Duolingo 145, ASYV Best Annual Academic Performer in 2024 and 2025, subjects, and self-directed study. Scores come from `src/content.js`.
+- `src/professional-theme.css` is the active final palette: navy, white, light slate, and one blue accent. The hero and résumé remain white; Academics uses navy. Earlier theme files are base styles only.
+- The extracurricular index includes Code Club, Debate Club, Robotics & Innovation Club, ASYV Live Band, Isano Isangiwe, and Student Government. The résumé keeps its separate shorter selection, with Debate Club replacing Jackal Tech there.
 - MOVA is clearly described as a prototype and business pitch.
-- No public contact address was supplied, so no contact destination is invented.
+- The supplied LinkedIn is used for contact. The résumé contact line is copied from the supplied document.
 - Spelling Bee, Growthwave, and Model UN are removed from the extracurricular index. Delegate awards and their photographs remain in Honors.
 - The application-dependent “Sure” interaction is removed. Creative activities stand on their own with named groups, performances, and contributions.
