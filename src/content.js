@@ -3,7 +3,8 @@ export const profile = {
   name: 'Eric Dufitimana',
   school: 'Agahozo-Shalom Youth Village',
   introduction: 'I build software for my school in Rwanda. If you spend a week here, you might also hear me arguing a debate motion, singing with the school band, or reading a poem I wrote.',
-  contact: null, // Add a confirmed public https: profile or mailto: address to show contact.
+  contact: 'https://www.linkedin.com/in/eric-dufitimana-4676872a4/',
+  email: 'ericdufitimanaasyv@gmail.com',
 };
 
 export const projects = [

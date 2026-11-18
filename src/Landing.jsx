@@ -13,7 +13,7 @@ export default function Landing() {
         </div>
         <div className="landing-actions">
           <a className="landing-primary" href="#work">Explore my projects <span aria-hidden="true">↗</span></a>
-          <a className="landing-secondary" href="#about">More about me <span aria-hidden="true">↓</span></a>
+          <a className="landing-secondary" href="#leadership">My activities <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <figure className="landing-portrait">

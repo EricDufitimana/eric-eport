@@ -22,7 +22,7 @@ try {
   assert.equal(await page.locator('.project').count(), 4);
   assert.equal(await page.locator('.activity').count(), 6);
   assert.equal(await page.locator('tbody tr').count(), 15);
-  assert.equal(await page.locator('a[href^="mailto:"]').count(), 0);
+  assert.equal(await page.locator('#connect a[href="mailto:ericdufitimanaasyv@gmail.com"]').count(), 1);
   assert.match(await page.locator('#career').innerText(), /500 users at peak/);
   assert.equal(await page.getByRole('link', { name: 'Open the tracker' }).getAttribute('href'), 'https://asyvleague.vercel.app/');
   const brokenAnchors = await page.locator('a[href^="#"]').evaluateAll(links => links.map(link => link.getAttribute('href')).filter(href => !document.getElementById(href.slice(1))));
@@ -31,7 +31,7 @@ try {
   assert.match(await page.locator('.academic-scores').innerText(), /145/);
   assert.match(await page.locator('.academic-recognition').innerText(), /2024.*2025/);
   assert.equal(await page.locator('#academics').evaluate(el=>el.previousElementSibling.querySelector('section')?.id), 'resume');
-  assert.match(await page.locator('#creative').innerText(), /Ubumuntu Arts Festival/);
+  assert.match(await page.locator('.activity-list').innerText(), /Ubumuntu Arts Festival/);
   assert.match(await page.locator('#creative').innerText(), /Juno Kizigenza and Ariel Wayz/);
   assert.doesNotMatch(await page.locator('.activity-list').innerText(), /Spelling Bee|Model UN|Growthwave/);
   await page.locator('#career').evaluate(el => window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 120, behavior:'instant'}));
@@ -61,7 +61,12 @@ try {
   await page.getByRole('button', { name: 'Read on page', exact: true }).click();
   assert.equal(await page.getByRole('link', { name: 'Open the CRC platform' }).getAttribute('href'), 'https://asyvcrc.vercel.app/');
   assert.equal(await page.getByRole('link', { name: 'Open the clubs platform' }).getAttribute('href'), 'https://asyvcms.vercel.app/');
-  await page.locator('#about').scrollIntoViewIfNeeded();
+  assert.equal(await page.locator('#leadership').evaluate(el=>el.parentElement.nextElementSibling.id), 'connect');
+  assert.equal(await page.locator('#main > :last-child').getAttribute('id'), 'connect');
+  assert.equal(await page.locator('#about').count(), 0);
+  const projectColors = await page.locator('.project-body').evaluateAll(elements => elements.map(el => getComputedStyle(el).backgroundColor));
+  assert.equal(new Set(projectColors).size, 4);
+  await page.locator('#leadership').scrollIntoViewIfNeeded();
   await page.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => { img.loading = 'eager'; return img.decode().catch(() => {}); })));
   const images = await page.locator('img').evaluateAll(imgs => imgs.filter(i => !i.complete || i.naturalWidth === 0).map(i => i.src));
   assert.deepEqual(images, []);
