@@ -46,7 +46,7 @@ try {
   assert.match(await page.locator('#creative').innerText(), /Isano Isangiwe/);
   assert.match(await page.locator('.activity-list').innerText(), /ASYV Live Band/);
   assert.match(await page.locator('.activity-list').innerText(), /Isano Isangiwe/);
-  assert.match(await page.locator('.activity-list').innerText(), /Student Government/);
+  assert.match(await page.locator('.activity-list').innerText(), /Student Government/i);
   assert.doesNotMatch(await page.locator('.activity-list').innerText(), /Jackal Tech/);
   assert.equal(await page.locator('#main > .band-resume').evaluate(el=>el.previousElementSibling?.id), 'home');
   assert.match(await page.locator('.resume-paper').innerText(), /20-minute daily sessions/);

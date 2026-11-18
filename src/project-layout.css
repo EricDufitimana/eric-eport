@@ -1,0 +1,4 @@
+/* Normal document flow: cards stay separate as the page scrolls. */
+.projects-list{display:flex;flex-direction:column;gap:60px;padding-bottom:0}
+.projects-list>.project{position:relative;top:auto;z-index:auto;margin-bottom:0;scale:1;filter:none;transition:transform .5s var(--ease);box-shadow:none}
+@media(max-width:650px){.projects-list{gap:38px}}
