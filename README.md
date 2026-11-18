@@ -1,41 +1,41 @@
-# Eric Dufitimana — ePortfolio
+# Eric Dufitimana — React portfolio
 
-A standalone React + Vite portfolio. It is independent of the parent league app. Nothing is published automatically.
+Independent React + Vite project, outside the zleague folder. Local only; nothing has been published.
 
-## Local preview
+## Run
 
 ```sh
-cd eric-portfolio
 npm install
 npm run dev
 ```
 
-Open the Local URL printed by Vite (normally http://127.0.0.1:5173).
+Open the Local URL Vite prints. The default is http://127.0.0.1:5173; if it is occupied, Vite automatically selects the next available port.
 
 ```sh
 npm run build
 npm run preview
 ```
 
-## Editing
+## Edit
 
-- `src/content.js`: profile, project descriptions, roles, learning, all 15 honors, and track names.
-- `src/main.jsx`: editorial copy and page components.
-- `src/styles.css`: responsive layout, colors, typography, and reduced-motion behavior.
-- Screenshots: add `public/images/career.webp`, `public/images/clubs.webp`, and `public/images/champions.webp`. Real images automatically replace the text layouts. The champion screenshot is also used in the homepage feature. Use public-safe images only. The supplied remote image sources returned HTTP 403 during implementation; no replacement photographs or screenshots are fabricated.
-- Add a confirmed public URL or `mailto:` address to `profile.contact` to display a contact link. Unknown project links stay hidden.
+- `src/content.js`: projects, confirmed external links, activities, scores, honors, and image captions.
+- `src/main.jsx`: page structure, original SVG illustrations, accessible screenshot dialog, and editorial text.
+- `src/styles.css`: white grid, cyan/pink/yellow/mint palette, Flux headings, handwritten notes, responsive layouts and motion.
+- `src/stack.js`: scroll-driven project stacking. Desktop cards slide over the previous card, which gently scales back. Small screens and reduced-motion settings keep the cards readable without overlap.
+- `public/images`: user-supplied project screenshots and photos. Project screenshots retain their original colors on white, without tinted backing.
+- `src/PoemVideo.jsx` and `src/poem.css`: YYAS talent-show poem recording, with native in-page playback controls. The public shared video and poster are saved as `public/images/yyas-poem.mp4` and `yyas-poem-poster.jpg`, so playback does not depend on expiring Google Photos streaming URLs. The original Google Photos link remains available.
 
-## Private handoff — before publishing
+Design reference: https://nudge-folio.framer.website/. The public reference supplied the Flux display font asset; handwritten and body fonts use Google Fonts. Illustrations are original SVG components.
 
-- Confirm the sequence of Debate Club officer titles. The public page currently says “Debate Club leadership.”
-- Confirm the Jackal Tech officer title. The page currently says “Student software team.”
-- Confirm current/completed status of Code Club and other activities; completed roles are described in past tense.
-- Confirm project deployment/maintenance status, particularly the Career Resources Center revamp and Clubs Management System.
-- MOVA remains labeled a prototype and business pitch; no projected figures are presented as impact.
-- Supply the three public-safe screenshots when ready, and optionally a performance photograph or original poem. No real performance photo or poem is implied by the placeholder.
-- No public contact details have been supplied. No contact destination is invented.
-- Review content before publishing. No application essays, private family details, or personal identities are included.
+## Checks
 
-## Design reference
+With the dev server running, `npm run check` checks responsive widths, navigation, screenshot dialogs, images, content, keyboard access, and reduced motion. Set `PORTFOLIO_URL` if the dev server uses another port.
 
-Inspired by https://nudge-folio.framer.website/: oversized introductory typography, restrained navigation, numbered project stories, generous spacing, and playful editorial accents. The warm paper, deep green, Instrument Serif/DM Sans pairing, first-person content, and equal attention to creative work follow the supplied portfolio brief.
+## Private handoff
+
+- Confirm Jackal Tech officer title and current project maintenance status before publishing.
+- Debate Club currently uses “Debate Club leadership”; verify the final officer sequence in the activity record before publishing.
+- MOVA is clearly described as a prototype and business pitch.
+- No public contact address was supplied, so no contact destination is invented.
+- Spelling Bee, Growthwave, and Model UN are removed from the extracurricular index. Delegate awards and their photographs remain in Honors.
+- The application-dependent “Sure” interaction is removed. Creative activities stand on their own with named groups, performances, and contributions.

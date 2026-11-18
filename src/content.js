@@ -3,7 +3,7 @@ export const profile = {
   name: 'Eric Dufitimana',
   school: 'Agahozo-Shalom Youth Village',
   introduction: 'I build software for my school in Rwanda. If you spend a week here, you might also hear me arguing a debate motion, singing with the school band, or reading a poem I wrote.',
-  contact: null, // Add a confirmed public https: profile or mailto: address to show contact.
+  contact: 'https://www.linkedin.com/in/eric-dufitimana-4676872a4/',
 };
 
 export const projects = [
@@ -11,7 +11,7 @@ export const projects = [
     id: 'career', number: '01', title: 'A little direction.\nA lot of possibility.', name: 'ASYV Career Resources Center', category: 'OPPORTUNITIES & CONNECTION',
     description: 'Finding your next step should be a little easier. I built a place where students can find opportunities and connect with counselors, while counselors can organize workshops, track attendance, and share announcements.',
     detail: 'My project record includes a revamp to accommodate changes at the center. It taught me that useful software needs to grow with the people using it.',
-    impact: '500 users at peak', technology: 'Built with Next.js & Supabase', image: '/images/career.png',
+    impact: '500 users at peak', technology: 'Built with Next.js & Supabase', image: '/images/career.png', url: 'https://asyvcrc.vercel.app/', linkLabel: 'Open the CRC platform',
     alt: 'Screenshot of the ASYV Career Resources Center platform',
     fallback: ['Find an opportunity', 'Connect with a counselor', 'Make your next move'],
   },
@@ -19,7 +19,7 @@ export const projects = [
     id: 'clubs', number: '02', title: 'Less paperwork.\nMore club time.', name: 'ASYV Clubs Management System', category: 'MADE FOR SCHOOL LIFE',
     description: 'Club presidents used to keep attendance and meeting notes on paper. I built a system where they can record both in one place, so the next meeting starts with less catching up.',
     detail: 'One place for the people who show up and the ideas they bring.',
-    impact: 'Used by 20+ school clubs', image: '/images/clubs.png',
+    impact: 'Used by 20+ school clubs', image: '/images/clubs.png', url: 'https://asyvcms.vercel.app/', linkLabel: 'Open the clubs platform',
     alt: 'Screenshot of the ASYV Clubs Management System', fallback: ['Keep attendance', 'Save meeting notes', 'Get back to your club'],
   },
   {
@@ -35,18 +35,48 @@ export const projects = [
     description: 'In Rwanda, getting a moto can mean walking to a commercial stand first. Could a basic phone bring the driver to you? Our proposed USSD flow connects a passenger with a driver by phone number.',
     detail: 'I explored the smartphone experience through a React map prototype. MOVA is a prototype and business pitch, with more to learn before it becomes a service.',
     impact: 'Prototype & business pitch', technology: 'React map prototype',
+    url: 'https://mova-rw.vercel.app/', linkLabel: 'Explore the MOVA prototype',
   },
 ];
 
 export const activities = [
-  { name: 'Code Club', role: 'Co-founder & president', text: 'I organized weekly sessions teaching programming fundamentals to 70+ students.' },
-  { name: 'Robotics & Innovation Club', role: 'Co-founder & former vice president · Grades 9–11', text: 'I helped start ASYV’s first robotics club, mentored 20+ students, and contributed to our team’s national FIRST LEGO League result.', honor: 'first-lego' },
-  { name: 'Debate Club', role: 'Debate Club leadership', text: 'I helped coordinate speaking sessions for 50+ members, many of them first-year students.' },
-  { name: 'Jackal Tech at ASYV', role: 'Student software team', text: 'I helped organize a selective group of 15 students building software for real problems.' },
-  { name: 'Student government', role: 'Former junior minister & former vice president', text: 'As junior minister, I helped 128 first-year students settle into village life, practice public speaking, and connect with older students. I later served as student government vice president.' },
-  { name: 'Growthwave Ltd.', role: 'Selected trainee', text: 'I was selected as one of eight students for training in building market-ready software products.' },
-  { name: 'Model UN & Model African Union', role: 'Delegate', text: 'I represented the United Kingdom in UNHCR at Green Hills MUN and Ethiopia at Yale Model African Union.', honors: [{ id: 'green-hills', label: 'Green Hills recognition' }, { id: 'yale-delegate', label: 'Yale MAU recognition' }] },
-  { name: 'ASYV Spelling Bee', role: 'Organizer · Grade 9', text: 'I organized the school spelling competition.' },
+  {
+    "name": "Raspberry Pi Foundation Code Club @ ASYV",
+    "role": "Co-founder & president · Grades 11–12",
+    "text": "I expanded access to programming from 15 selected students to 70+ and taught web development. A club member applied those lessons to build an education platform."
+  },
+  {
+    "name": "ASYV Debate Club",
+    "role": "Secretary · Grade 10 / Vice president · Grade 11",
+    "text": "I ran 20-minute daily sessions on rebuttals and thinking on the spot. First-years I taught reached the semifinals of a national debate competition."
+  },
+  {
+    "name": "Robotics & Innovation Club",
+    "role": "Co-founder & former vice president · Grades 9–11",
+    "text": "I helped start ASYV’s first robotics club, mentored 20+ students, and contributed to our team’s national FIRST LEGO League result.",
+    "honor": "first-lego"
+  },
+  {
+    "name": "ASYV Live Band",
+    "role": "Rapper & lyricist · Grades 10–12",
+    "text": "I perform weekly as a rapper for a 500+ crowd. I performed at a concert for 1,000+ people and at the international Ubumuntu Arts Festival. At the Agahozo & Friends concert at Zaria Court, I performed alongside Juno Kizigenza and Ariel Wayz. I am featured on two released songs."
+  },
+  {
+    "name": "Isano Isangiwe — ASYV poetry & theatre group",
+    "role": "Poet & theatre director · Grades 10–12",
+    "text": "I write and recite original poems for 500+ people. I organized, directed, and acted in an adaptation of Romeo & Juliet."
+  },
+
+  {
+    "name": "Jackal Tech at ASYV",
+    "role": "Student software team",
+    "text": "I helped organize a selective group of 15 students developing software for real problems."
+  },
+  {
+    "name": "Student government",
+    "role": "Former junior minister",
+    "text": "As junior minister, I helped 128 first-year students settle into village life, practice public speaking, and connect with older students. I later served as student government vice president."
+  }
 ];
 
 export const learning = [
@@ -77,7 +107,6 @@ export const honors = [
   { id: 'language', name: 'ASYV Language Day, Best Speech', grade: '9', context: 'School' },
 ];
 
-export const tracks = ['Nikes', 'Self Control', 'Solo', 'White Ferrari'];
 
 export const scores = [
   { name: 'SAT', score: '1520', outOf: '1600' },
@@ -85,7 +114,39 @@ export const scores = [
 ];
 
 export const creativeActivities = [
-  { type: 'mic', title: 'Singing with the school band', place: 'At Agahozo-Shalom Youth Village', text: 'I sang with the school band for audiences of 550+. Performing is another way I get to be part of village life.', note: 'Live music · School performances', color: 'pink' },
-  { type: 'theatre', title: 'Theatre & Village Time', place: 'School productions at ASYV', text: 'I acted in school productions. Through Village Time theatre, I reflected on removing the MCs and leaving more room for the people performing.', note: 'Acting · Making room for others', color: 'yellow' },
-  { type: 'pen', title: 'Writing & performing poetry', place: 'School performances & the ASYV Grade Art Competition', text: 'I wrote and performed poems about growth and love. I won the poetry category of the ASYV Grade Art Competition in both Grade 9 and Grade 10.', note: 'Poetry category winner · Twice', color: 'mint' },
+  {
+    "type": "mic",
+    "title": "ASYV Live Band",
+    "place": "Rapper & lyricist · Grades 10–12",
+    "text": "I perform weekly as a rapper for a 500+ crowd. I also performed at a concert for 1,000+ people and at the international Ubumuntu Arts Festival. At the Agahozo & Friends concert at Zaria Court, I performed alongside Juno Kizigenza and Ariel Wayz. I am featured on two released songs.",
+    "note": "Weekly performances · Two released songs",
+    "color": "pink",
+    "image": "/images/zaria-group.jpg",
+    "alt": "A moment from the Agahozo & Friends concert at Zaria Court"
+  },
+  {
+    "type": "theatre",
+    "title": "Isano Isangiwe",
+    "place": "Poet & theatre director · Grades 10–12",
+    "text": "In ASYV’s poetry and theatre group, I write and recite original poems for 500+ people. I organized, directed, and acted in an adaptation of Romeo & Juliet.",
+    "note": "Poetry · Directing · Acting",
+    "color": "yellow",
+    "image": "/images/theatre.jpg",
+    "alt": "A school theatre production at ASYV"
+  },
+  {
+    "type": "pen",
+    "title": "Original poetry",
+    "place": "Writing, reciting & performing at ASYV",
+    "text": "I write poems about growth and love and share them through live performance. I won the poetry category of the ASYV Grade Art Competition in both Grade 9 and Grade 10.",
+    "note": "Poetry category winner · Twice",
+    "color": "mint"
+  }
+];
+
+export const recognitionPhotos = [
+  { image: '/images/yale-mau.jpg', caption: 'Yale Model African Union V · Best Delegate', href: '#yale-delegate', alt: 'At Yale Model African Union V, holding the Best Delegate award' },
+  { image: '/images/fll.jpg', caption: 'FIRST LEGO League Rwanda · Our team’s competition', href: '#first-lego', alt: 'At the FIRST LEGO League competition, wearing the ASYV team shirt' },
+  { image: '/images/ghamun.jpg', caption: 'Green Hills MUN · Best Delegate', href: '#green-hills', alt: 'At Green Hills Model United Nations with a certificate and award' },
+  { image: '/images/yyas.jpg', caption: 'Yale Young African Scholars · 2025 participant', href: '#yyas', alt: 'Group photograph with fellow Yale Young African Scholars participants' },
 ];
